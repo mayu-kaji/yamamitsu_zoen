@@ -1,0 +1,49 @@
+@use 'sass:math';
+
+// インナー幅
+$innerWidth: 1246px;
+
+// 余白
+$padding-pc: 25px;
+$padding-sp: 25px;
+
+// フォント
+$font-main: "Noto Serif JP", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+$font-sub: "Noto Sans JP" , "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+
+// 色指定
+$black: #000;
+$white: #fff;
+$gold: #70644E;
+$navy: #141F2F;
+$navy-txt: #14263A;
+$navy-20: hsla(212, 49%, 15%, 0.2);
+$txt: #353044;
+$red: #C1272D;
+$gray: #999999;
+$light-gray:#CCCCCC;
+
+// ブレイクポイント
+$breakpoints: (
+  sm: 600,
+  md: 767,
+  lg: 1024,
+  xl: 1336,
+  xxl: 1930,
+);
+
+// メディアクエリ
+$mediaquerys: (
+  sm: "screen and (max-width: #{map-get($breakpoints,'sm')}px)",
+  md: "screen and (max-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (max-width: #{map-get($breakpoints,'lg')}px)",
+  xl: "screen and (max-width: #{map-get($breakpoints,'xl')}px)",
+  xxl: "screen and (min-width: #{map-get($breakpoints,'xxl')}px)",
+);
+
+// メディアクエリを "@include mq(){}" で書くことができる
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}

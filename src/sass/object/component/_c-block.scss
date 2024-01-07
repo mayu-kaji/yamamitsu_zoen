@@ -1,0 +1,137 @@
+@use "global" as *;
+
+
+.c-block {
+ 
+}
+
+.c-block__wrapper {
+  display: flex;
+  // @include mq(xxl) {
+  //   max-width: rem(1920);
+  //   margin: 0 auto;
+  //   justify-content: center;
+  // }
+  @include mq(md) {
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+.c-block__wrapper.c-block__wrapper--rev {
+  flex-direction: row-reverse;
+  @include mq(md) {
+    flex-direction: column;
+  }
+}
+
+.c-block__img {
+  max-width: 50%;
+  width: 100%;
+  @include mq(md) {
+    max-width: unset;
+  }
+}
+
+.c-block__img img {
+  width: 100%;
+  aspect-ratio: 681 / 444;
+  @include mq(md) {
+    aspect-ratio: 375 / 244;
+  }
+}
+
+.c-block__number-sp {
+  display: none;
+  @include mq(md) {
+    display: block;
+    width: vw(375,45);
+    position: absolute;
+    top: rem(23);
+    right: 5%;
+  }
+}
+
+.c-block__wrapper--rev .c-block__number-sp {
+  display: none;
+  @include mq(md) {
+    display: block;
+    width: vw(375,55);
+    position: absolute;
+    top: rem(23);
+    left: 5%;
+  }
+}
+
+.c-block__body {
+  max-width: 50%;
+  width: 100%;
+  padding: rem(50) rem(50) rem(30);
+  position: relative;
+  max-height: rem(444);
+  @include mq(md) {
+    max-width: unset;
+    padding: vw(375,25) vw(375,25) ;
+    min-height: rem(244);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @include mq(sm) {
+    padding: vw(375,25) vw(375,25) vw(375,15) ;
+  }
+}
+
+.c-block__wrapper--rev .c-block__body {
+  padding: rem(166) rem(50) rem(50) rem(191);
+  @include mq(md) {
+    padding: vw(375,25)  vw(375,25) rem(15);
+    text-align: center;
+  }
+}
+
+.c-block__number {
+  width: vw(1366,172);
+  position: absolute;
+  right: rem(10);
+  top: rem(17);
+  @include mq(xxl) {
+    right: 0;
+    left: 75%;
+  }
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.c-block__wrapper--rev .c-block__number {
+  left: rem(18);
+  right: auto;
+  @include mq(xxl) {
+    left: 0;
+    right: 75%;
+  }
+}
+
+.c-block__txt {
+  color: $white;
+  letter-spacing: 0.04em;
+  font-size: rem(16);
+  line-height: calc(38 / 16);
+  @include mq(md) {
+    font-size: rem(12);
+    width: rem(375);
+    line-height: calc(22/12);
+    text-align: left;
+    padding: 0 rem(25);
+  }
+}
+
+.c-block__txt:not(:first-of-type){
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(26);
+
+  }
+}
