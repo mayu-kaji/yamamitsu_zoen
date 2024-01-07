@@ -209,7 +209,6 @@ button {
     position: absolute;
     right: 5%;
     top: 1.4375rem;
-    width: 12vw;
   }
 }
 
@@ -222,14 +221,12 @@ button {
     left: 5%;
     position: absolute;
     top: 1.4375rem;
-    width: 14.6666666667vw;
   }
 }
 
 .c-block__body {
   max-height: 27.75rem;
   max-width: 50%;
-  padding: 3.125rem 3.125rem 1.875rem;
   position: relative;
   width: 100%;
 }
@@ -240,17 +237,11 @@ button {
     display: flex;
     max-width: unset;
     min-height: 15.25rem;
-    padding: 6.6666666667vw 6.6666666667vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    max-height: 31.25rem;
   }
 }
 @media screen and (max-width: 600px) {
@@ -259,21 +250,15 @@ button {
   }
 }
 
-.c-block__wrapper--rev .c-block__body {
-  padding: 10.375rem 3.125rem 3.125rem 11.9375rem;
-}
 @media screen and (max-width: 767px) {
   .c-block__wrapper--rev .c-block__body {
-    padding: 6.6666666667vw 6.6666666667vw 0.9375rem;
     text-align: center;
   }
 }
 
 .c-block__number {
   position: absolute;
-  right: 0.625rem;
-  top: 1.0625rem;
-  width: 12.5915080527vw;
+  width: 100%;
 }
 @media screen and (min-width: 1930px) {
   .c-block__number {
@@ -287,17 +272,6 @@ button {
   }
 }
 
-.c-block__wrapper--rev .c-block__number {
-  left: 1.125rem;
-  right: auto;
-}
-@media screen and (min-width: 1930px) {
-  .c-block__wrapper--rev .c-block__number {
-    left: 0;
-    right: 75%;
-  }
-}
-
 .c-block__txt {
   color: #fff;
   font-size: 1rem;
@@ -306,11 +280,9 @@ button {
 }
 @media screen and (max-width: 767px) {
   .c-block__txt {
-    font-size: 0.75rem;
+    font-size: 3.2vw;
     line-height: 1.8333333333;
-    padding: 0 1.5625rem;
     text-align: left;
-    width: 23.4375rem;
   }
 }
 
@@ -319,7 +291,116 @@ button {
 }
 @media screen and (max-width: 767px) {
   .c-block__txt:not(:first-of-type) {
-    margin-top: 1.625rem;
+    margin-top: 1.5625rem;
+  }
+}
+
+/*number*/
+.c-block__number-01 {
+  max-width: 6.9610778443vw;
+  right: 3.25rem;
+  top: 2.5rem;
+}
+
+.c-block__number-02 {
+  left: 2.8125rem;
+  max-width: 8.6826347305vw;
+  top: 2.1875rem;
+}
+@media screen and (min-width: 1930px) {
+  .c-block__number-02 {
+    left: 50px;
+    top: 50px;
+  }
+}
+
+.c-block__number-03 {
+  max-width: 8.7574850299vw;
+  right: 2.5rem;
+  top: 2.1875rem;
+}
+
+.c-block__number-04 {
+  left: 2.1875rem;
+  max-width: 9.0568862275vw;
+  top: 2.0625rem;
+}
+@media screen and (min-width: 1930px) {
+  .c-block__number-04 {
+    left: 50px;
+    top: 50px;
+  }
+}
+
+/*number-sp*/
+@media screen and (max-width: 767px) {
+  .c-block__number-sp01 {
+    width: 12vw;
+  }
+  .c-block__number-sp02 {
+    width: 14.6666666667vw;
+  }
+  .c-block__number-sp03 {
+    width: 14.9333333333vw;
+  }
+  .c-block__number-sp04 {
+    width: 15.4666666667vw;
+  }
+}
+/*block-body*/
+.c-block__body-01 {
+  padding: 3.9375rem 3.375rem 1.875rem;
+}
+@media screen and (max-width: 767px) {
+  .c-block__body-01 {
+    padding: 7.4666666667vw 6.6666666667vw 2.6666666667vw;
+  }
+}
+
+.c-block__body-02 {
+  padding: 12.3502994012vw 1.875rem 1.875rem 11.875rem;
+}
+@media screen and (max-width: 767px) {
+  .c-block__body-02 {
+    padding: 19.4666666667vw 6.6666666667vw;
+  }
+}
+
+.c-block__body-03 {
+  padding: 10.3125rem 3.375rem 1.875rem;
+}
+@media screen and (max-width: 767px) {
+  .c-block__body-03 {
+    padding: 16vw 5.3333333333vw 8vw 6.6666666667vw;
+  }
+}
+
+.c-block__body-04 {
+  padding: 6.875rem 0rem 1.875rem 10.625rem;
+  text-align: justify;
+}
+@media screen and (max-width: 767px) {
+  .c-block__body-04 {
+    padding: 11.4666666667vw 6.6666666667vw 6.6666666667vw 6.6666666667vw;
+  }
+}
+@media screen and (min-width: 1367px) {
+  .c-block__body-04 {
+    padding: 11.2275449102vw 0rem 1.875rem 8.75rem;
+  }
+}
+
+.c-block__body-04 .c-block__txt {
+  letter-spacing: -0.1em;
+}
+@media screen and (max-width: 767px) {
+  .c-block__body-04 .c-block__txt {
+    letter-spacing: 0.04em;
+  }
+}
+@media screen and (min-width: 1367px) {
+  .c-block__body-04 .c-block__txt {
+    letter-spacing: 0.03em;
   }
 }
 

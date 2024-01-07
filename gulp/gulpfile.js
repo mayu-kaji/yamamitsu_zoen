@@ -96,7 +96,7 @@ const browsers = [
 
 const cssSass = (isProduction = false) => {
   const sassOptions = isProduction ? { outputStyle: "compressed" } : { outputStyle: "expanded" };
-  const postcssPlugins = [cssnext({ features: { rem: false } }, browsers), cssDeclarationSorter({ order: "alphabetical" })];
+  const postcssPlugins = [cssnext({ features: { rem: true } }, browsers), cssDeclarationSorter({ order: "alphabetical" })];
 
   return src(srcPath.css, { sourcemaps: !isProduction }) // ソースマップのオプションを追加
     .pipe(sassGlob())

@@ -20,3 +20,15 @@
 @function vw($window_width, $size) {
 	@return math.div($size, $window_width) * 100vw;
 }
+
+// フォントサイズ ÷ 画面幅 * 100vw の計算
+// 例：vw-xl(16)→ 16px ÷ 1400px × 100vw
+@function vw-xl($size) {
+	@return math.div($size, 1336) * 100vw;
+}
+
+// 例：vw-m(16)→ 16px ÷ 1400px × 100vw
+@function vw-m($size) {
+	@return math.div($size,375) * 100vw;
+}
+
