@@ -139,7 +139,9 @@ button {
   margin-left: auto;
   margin-right: auto;
   max-width: 1296px;
+  padding-left: 25px;
   padding-left: 1.5625rem;
+  padding-right: 25px;
   padding-right: 1.5625rem;
   width: 100%;
 }
@@ -148,6 +150,11 @@ button {
     padding-left: 1.5625rem;
     padding-right: 1.5625rem;
   }
+}
+
+/* top - diagnosis  */
+.c-block {
+  background: #141F2F;
 }
 
 .c-block__wrapper {
@@ -225,6 +232,7 @@ button {
 }
 
 .c-block__body {
+  max-height: 444px;
   max-height: 27.75rem;
   max-width: 50%;
   position: relative;
@@ -274,6 +282,7 @@ button {
 
 .c-block__txt {
   color: #fff;
+  font-size: 16px;
   font-size: 1rem;
   letter-spacing: 0.04em;
   line-height: 2.375;
@@ -287,6 +296,7 @@ button {
 }
 
 .c-block__txt:not(:first-of-type) {
+  margin-top: 40px;
   margin-top: 2.5rem;
 }
 @media screen and (max-width: 767px) {
@@ -298,13 +308,17 @@ button {
 /*number*/
 .c-block__number-01 {
   max-width: 6.9610778443vw;
+  right: 52px;
   right: 3.25rem;
+  top: 40px;
   top: 2.5rem;
 }
 
 .c-block__number-02 {
+  left: 45px;
   left: 2.8125rem;
   max-width: 8.6826347305vw;
+  top: 35px;
   top: 2.1875rem;
 }
 @media screen and (min-width: 1930px) {
@@ -316,13 +330,17 @@ button {
 
 .c-block__number-03 {
   max-width: 8.7574850299vw;
+  right: 40px;
   right: 2.5rem;
+  top: 35px;
   top: 2.1875rem;
 }
 
 .c-block__number-04 {
+  left: 35px;
   left: 2.1875rem;
   max-width: 9.0568862275vw;
+  top: 33px;
   top: 2.0625rem;
 }
 @media screen and (min-width: 1930px) {
@@ -349,7 +367,8 @@ button {
 }
 /*block-body*/
 .c-block__body-01 {
-  padding: 3.9375rem 3.375rem 1.875rem;
+  padding: 63px 54px 10px;
+  padding: 3.9375rem 3.375rem 0.625rem;
 }
 @media screen and (max-width: 767px) {
   .c-block__body-01 {
@@ -358,6 +377,7 @@ button {
 }
 
 .c-block__body-02 {
+  padding: 12.3502994012vw 30px 30px 190px;
   padding: 12.3502994012vw 1.875rem 1.875rem 11.875rem;
 }
 @media screen and (max-width: 767px) {
@@ -367,6 +387,7 @@ button {
 }
 
 .c-block__body-03 {
+  padding: 165px 54px 30px;
   padding: 10.3125rem 3.375rem 1.875rem;
 }
 @media screen and (max-width: 767px) {
@@ -376,6 +397,7 @@ button {
 }
 
 .c-block__body-04 {
+  padding: 110px 0px 30px 170px;
   padding: 6.875rem 0rem 1.875rem 10.625rem;
   text-align: justify;
 }
@@ -411,11 +433,14 @@ button {
   color: white;
   display: block;
   font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  font-size: 14px;
   font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 1;
+  max-width: 349px;
   max-width: 21.8125rem;
+  padding: 18px 5px;
   padding: 1.125rem 0.3125rem;
   position: relative;
   text-align: center;
@@ -439,6 +464,7 @@ button {
   height: 100%;
   position: absolute;
   top: 50%;
+  width: 28px;
   width: 1.75rem;
   -webkit-transform: translateY(-50%);
   right: 7.45%;
@@ -457,12 +483,353 @@ button {
     right: 1%;
   }
 }
+.p-concept {
+  padding-top: 65px;
+  padding-top: 4.0625rem;
+}
+
+.p-concept__inner {
+  max-width: 1287px;
+  max-width: 80.4375rem;
+}
+
+.p-concept__ttl {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .p-concept__ttl {
+    color: hsla(212, 49%, 15%, .2);
+    display: block;
+    font-size: 6.4vw;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.p-concept__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 60px;
+  padding-bottom: 3.75rem;
+}
+@media screen and (max-width: 767px) {
+  .p-concept__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 20vw;
+  }
+}
+
+.p-concept__img {
+  max-width: 641px;
+  max-width: 40.0625rem;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .p-concept__img {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+    margin-top: -7%;
+    max-width: unset;
+            order: 3;
+    position: relative;
+    z-index: -1;
+  }
+}
+
+.p-concept__contents {
+  display: contents;
+}
+@media screen and (max-width: 767px) {
+  .p-concept__contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin-top: 2.75rem;
+  }
+}
+
+.p-concept__wrap {
+  max-width: 410px;
+  max-width: 25.625rem;
+  padding-left: 56px;
+  padding-left: 3.5rem;
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .p-concept__wrap {
+    min-width: 300px;
+    padding-left: 2.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-concept__wrap {
+    background-color: #fff;
+    max-width: unset;
+    min-width: unset;
+    padding-bottom: 1.875rem;
+    padding-left: 1.75rem;
+  }
+}
+
+.p-concept__txt {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.8;
+}
+@media screen and (max-width: 1024px) {
+  .p-concept__txt {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-concept__txt {
+    font-size: 3.2vw;
+    line-height: 2.0833333333;
+  }
+}
+
+.p-concept__txt:nth-child(2) {
+  margin-top: 25px;
+  margin-top: 1.5625rem;
+}
+
+.p-concept__company {
+  margin-top: 30px;
+  margin-top: 1.875rem;
+  max-width: 163px;
+  max-width: 10.1875rem;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .p-concept__company {
+    max-width: 34.6666666667vw;
+  }
+}
+
+.p-concept__name {
+  margin-top: 15px;
+  margin-top: 0.9375rem;
+  max-width: 246px;
+  max-width: 15.375rem;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .p-concept__name {
+    max-width: 45.3333333333vw;
+  }
+}
+
+.p-concept__info {
+  font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.5714285714;
+  margin-top: 10px;
+  margin-top: 0.625rem;
+}
+@media screen and (max-width: 1024px) {
+  .p-concept__info {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-concept__info {
+    font-size: 3.2vw;
+    line-height: 2.0833333333;
+  }
+}
+
+.p-concept__profile {
+  margin-top: 15px;
+  margin-top: 0.9375rem;
+}
+
+.p-concept__profile dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.6428571429;
+}
+@media screen and (max-width: 1024px) {
+  .p-concept__profile dl {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-concept__profile dl {
+    font-size: 2.6666666667vw;
+    line-height: 1.6;
+  }
+}
+
+.p-concept__profile dt {
+  white-space: nowrap;
+  width: 89px;
+  width: 5.5625rem;
+}
+@media screen and (max-width: 767px) {
+  .p-concept__profile dt {
+    white-space: normal;
+    width: 18.6666666667vw;
+  }
+}
+
+.p-concept__profile dd {
+  margin-left: 25px;
+  margin-left: 1.5625rem;
+  white-space: nowrap;
+}
+@media screen and (max-width: 767px) {
+  .p-concept__profile dd {
+    margin-left: 0rem;
+    white-space: normal;
+    width: 41.3333333333vw;
+  }
+}
+
+.p-concept__heading {
+  margin-left: 40px;
+  margin-left: 2.5rem;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+  color: #70644E;
+  font-size: 49px;
+  font-size: 3.0625rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+          writing-mode: vertical-rl;
+}
+@media screen and (max-width: 1024px) {
+  .p-concept__heading {
+    margin-left: 1.25rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-concept__heading {
+    font-size: 8vw;
+    margin-left: 0;
+  }
+}
+
+.p-concept__bg {
+  background-image: url(../img/bg_01.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 698px;
+  height: 43.625rem;
+  position: relative;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .p-concept__bg {
+    background-image: url(../img/bg_01_sp.webp);
+    height: 72.8vw;
+    margin-top: 5.375rem;
+  }
+}
+
+.p-concept__copy {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 271px;
+  width: 16.9375rem;
+}
+@media screen and (max-width: 767px) {
+  .p-concept__copy {
+    top: 0;
+    width: 83.7333333333vw;
+  }
+}
+
+/* top - diagnosis  */
 .p-diagnosis {
-  background: #141F2F;
+  position: relative;
+}
+
+.p-diagnosis__ttl {
+  text-orientation: mixed;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+  color: hsla(212, 49%, 15%, .2);
+  font-size: 130px;
+  font-size: 8.125rem;
+  font-weight: bold;
+  left: 1.5%;
+  letter-spacing: 0.04em;
+  position: absolute;
+  top: -4.5%;
+          writing-mode: vertical-rl;
+}
+@media screen and (max-width: 767px) {
+  .p-diagnosis__ttl {
+    display: none;
+  }
+}
+
+.p-diagnosis__box {
+  padding: 76px 0;
+  padding: 4.75rem 0;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .p-diagnosis__box {
+    padding: 10.6666666667vw 0;
+  }
+}
+
+.p-diagnosis__inner {
+  padding: 0 2.6666666667vw;
+}
+
+.p-diagnosis__copy {
+  color: #70644E;
+  font-size: 30px;
+  font-size: 1.875rem;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+@media screen and (max-width: 767px) {
+  .p-diagnosis__copy {
+    color: #141F2F;
+    font-size: 4.5333333333vw;
+    letter-spacing: 0.04em;
+  }
+}
+
+.p-diagnosis__txt {
+  font-size: 20px;
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+  line-height: 2.15;
+  margin-top: 25px;
+  margin-top: 1.5625rem;
+}
+@media screen and (max-width: 767px) {
+  .p-diagnosis__txt {
+    font-size: 3.2vw;
+    letter-spacing: -0.05em;
+    line-height: 2;
+  }
 }
 
 .p-test {
   color: red;
+  font-size: 50px;
   font-size: 3.125rem;
 }
 @media screen and (max-width: 767px) {

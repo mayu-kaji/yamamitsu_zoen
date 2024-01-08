@@ -1,5 +1,11 @@
 @use "global" as *;
 
+/* top - diagnosis  */
+
+.c-block {
+  background: $navy;
+}
+
 .c-block__wrapper {
   display: flex;
   @include mq(md) {
@@ -156,7 +162,7 @@
 
 /*block-body*/
 .c-block__body-01 {
-  padding: rem(63) rem(54) rem(30);
+  padding: rem(63) rem(54) rem(10);
   @include mq(md) {
     padding: vw-m(28) vw-m(25) vw-m(10);
   }
