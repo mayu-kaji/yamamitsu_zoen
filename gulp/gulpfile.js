@@ -119,7 +119,7 @@ const imgImagemin = async () => {
       imagemin(
         [
           imageminMozjpeg({
-            quality: 80,
+            quality: 75,
           }),
           imageminPngquant(),
           imageminSvgo({
