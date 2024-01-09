@@ -1,0 +1,65 @@
+@use "global" as *;
+
+/* top - diagnosis  */
+
+.p-diagnosis {
+  position: relative;
+}
+
+.p-diagnosis__ttl {
+  text-orientation: mixed;
+  writing-mode: vertical-rl;
+  font-size: rem(130);
+  letter-spacing: 0.04em;
+  color: $navy-20;
+  font-weight: bold;
+  position: absolute;
+  left: 1.5%;
+  top: -4.5%;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.p-diagnosis__box {
+  text-align: center;
+  padding: rem(76) 0;
+  @include mq(md) {
+    padding: vw-m(40) 0;
+  }
+}
+
+.p-diagnosis__inner {
+  padding: 0 vw-m(10);
+}
+
+.p-diagnosis__copy {
+  font-size: rem(30);
+  color: $gold;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  @include mq(md) {
+    font-size: vw-m(17);
+    color: $navy;
+    letter-spacing: 0.04em;
+  }
+}
+
+.p-diagnosis__txt {
+  letter-spacing: 0.04em;
+  font-size: rem(20);
+  line-height: calc(43/20);
+  margin-top: rem(25);
+  @include mq(md) {
+    font-size: vw-m(12);
+    line-height: calc(24/12);
+    letter-spacing: -0.05em;
+  }
+}
+
+.p-diagnosis__container {
+  @include mq(xxl) {
+    max-width: rem(1930);
+    margin-inline: auto;
+  }
+}

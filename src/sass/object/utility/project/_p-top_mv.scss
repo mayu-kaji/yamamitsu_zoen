@@ -1,0 +1,44 @@
+@use "global" as *;
+
+/*top - mv*/
+
+.p-top-mv__box {
+  position: relative;
+  overflow-x: hidden;
+  @include mq(md) {
+    padding-top: vw-m(114);
+    background-color: $navy;
+    height: vw-m(667);
+  }
+}
+
+.p-top-mv__video {
+  aspect-ratio: 1366 / 768;
+  width: 100vw;
+  height: rem(768);
+  object-fit: cover;
+  @include mq( md) {
+    height: vw-m(210);
+  }
+}
+
+.p-top-mv__ttl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  max-width: rem(1243);
+  width: 100%;
+  @include mq(md) {
+    max-width: vw-m(215);
+    top: 0;
+    top: 63.5%;
+  }
+  @include mq(sm) {
+    max-width: vw-m(284);
+    top: 0;
+    top: 68%;
+  }
+}
+

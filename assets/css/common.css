@@ -483,6 +483,22 @@ button {
     right: 1%;
   }
 }
+@media screen and (max-width: 767px) {
+  .u-desktop {
+    display: none;
+  }
+}
+
+.u-mobile {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .u-mobile {
+    display: block;
+  }
+}
+
+/* top - concept*/
 .p-concept {
   padding-top: 65px;
   padding-top: 4.0625rem;
@@ -500,8 +516,9 @@ button {
   .p-concept__ttl {
     color: hsla(212, 49%, 15%, .2);
     display: block;
-    font-size: 6.4vw;
+    font-size: 7.2vw;
     font-weight: bold;
+    line-height: 1;
     text-transform: uppercase;
   }
 }
@@ -575,7 +592,7 @@ button {
     max-width: unset;
     min-width: unset;
     padding-bottom: 1.875rem;
-    padding-left: 1.75rem;
+    padding-left: 1.25rem;
   }
 }
 
@@ -752,6 +769,12 @@ button {
 @media screen and (max-width: 767px) {
   .p-concept__copy {
     top: 0;
+    width: 74.6666666667vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .p-concept__copy {
+    top: 0;
     width: 83.7333333333vw;
   }
 }
@@ -827,29 +850,63 @@ button {
   }
 }
 
-.p-test {
-  color: red;
-  font-size: 50px;
-  font-size: 3.125rem;
-}
-@media screen and (max-width: 767px) {
-  .p-test {
-    font-size: 1.5625rem;
+@media screen and (min-width: 1930px) {
+  .p-diagnosis__container {
+    margin-inline: auto;
+    max-width: 120.625rem;
   }
 }
 
+/*top - mv*/
+.p-top-mv__box {
+  overflow-x: hidden;
+  position: relative;
+}
 @media screen and (max-width: 767px) {
-  .u-desktop {
-    display: none;
+  .p-top-mv__box {
+    background-color: #141F2F;
+    height: 177.8666666667vw;
+    padding-top: 30.4vw;
   }
 }
 
-.u-mobile {
-  display: none;
+.p-top-mv__video {
+  aspect-ratio: 1366/768;
+  height: 768px;
+  height: 48rem;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (max-width: 767px) {
-  .u-mobile {
-    display: block;
+  .p-top-mv__video {
+    height: 56vw;
+  }
+}
+
+.p-top-mv__ttl {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  max-width: 1243px;
+  max-width: 77.6875rem;
+          transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 10;
+}
+@media screen and (max-width: 767px) {
+  .p-top-mv__ttl {
+    max-width: 57.3333333333vw;
+    top: 0;
+    top: 63.5%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .p-top-mv__ttl {
+    max-width: 75.7333333333vw;
+    top: 0;
+    top: 68%;
   }
 }
 /*# sourceMappingURL=common.css.map */
