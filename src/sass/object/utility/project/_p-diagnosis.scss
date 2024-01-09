@@ -51,9 +51,10 @@
   line-height: calc(43/20);
   margin-top: rem(25);
   @include mq(md) {
+    font-size: rem(16);
+  }
+  @include mq(sm) {
     font-size: vw-m(12);
-    line-height: calc(24/12);
-    letter-spacing: -0.05em;
   }
 }
 
@@ -62,4 +63,18 @@
     max-width: rem(1930);
     margin-inline: auto;
   }
+}
+
+.p-diagnosis__outro {
+  text-align: center;
+  padding-top: rem(80);
+  padding-bottom: rem(60);
+  @include mq(md) {
+    padding-top: vw-m(45);
+    padding-bottom: vw-m(45);
+  }
+}
+
+.p-diagnosis__outro > .p-diagnosis__txt {
+  margin-top: 0;
 }
