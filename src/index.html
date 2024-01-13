@@ -18,11 +18,15 @@
   <!-- ファビコン -->
   <!-- <link rel="icon" href="" /> -->
   <!-- font -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400;500;700&family=Noto+Serif:wght@200;400;500;700&display=swap" rel="stylesheet">
   <!-- css -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
+  <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css"> -->
   <link rel="stylesheet" href="./css/common.css">
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="./js/swiper-bundle.min.js"></script>
   <script defer src="./js/common.js"></script>
 </head>
 <body>
@@ -317,21 +321,115 @@
     <!-- Treatment -->
     <section class="p-top-treatment">
       <div class="p-top-treatment__outer">
+        <p class="p-top-treatment-txt-side">治療紹介</p>
         <div class="p-top-treatment__ttl-wrap">
           <h3 class="p-top-treatment__ttl">Treatment</h3>
         </div>
         <div class="p-top-treatment__inner l-inner">
           <h4 class="p-top-treatment__heading">治療紹介</h4>
-          <p class="p-top-treatment">1973年に創業し、これまで多くの治療を行ってきましたので、その一部ご紹介いたします。</p>
+          <p class="p-top-treatment__txt">1973年に創業し、これまで多くの治療を行ってきましたので、その一部ご紹介いたします。</p>
         </div>
-        <span>治療紹介</span>
+      </div>
+      <!-- swiper -->
+      <div class="p-top-treatment__swiper-box">
+        <div class="swiper p-top-treatment__swiper">
+          <div class="swiper-wrapper p-top-treatment__wrapper">
+            <div class="swiper-slide p-top-treatment__slide">
+              <div class="p-top-treatment__blog">
+                <a href="" class="p-top-treatment__swiper-link">
+                  <img src="./img/test.jpg" alt="" />
+                </a>
+                <h4 class="p-top-treatment__blog-ttl">タイトルタイトルタイトル</h4>
+              </div>
+            </div>
+            <div class="swiper-slide p-top-treatment__slide">
+              <div class="p-top-treatment__blog">
+                <a href="" class="p-top-treatment__swiper-link">
+                  <img src="./img/test.jpg" alt="" />
+                </a>
+                <h4 class="p-top-treatment__blog-ttl">タイトル</h4>
+              </div>
+            </div>
+            <div class="swiper-slide p-top-treatment__slide">
+              <div class="p-top-treatment__blog">
+                <a href="" class="p-top-treatment__swiper-link">
+                  <img src="./img/test.jpg" alt="" />
+                </a>
+                <h4 class="p-top-treatment__blog-ttl">タイトル</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /swiper -->
+        <div class="p-top-treatment__inner l-inner">
+          <div class="p-top-treatment__btn">
+            <a href="" class="c-more-btn">全ての治療を見る</a><br>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="p-top-blog">
+      <div class="p-top-blog__img">
+        <img src="./img/top-blog.jpg" alt="">
+      </div>
+      <div class="p-top-blog__container">
+        <div class="p-top-blog__outer">
+          <p class="p-top-blog__txt-side">ブログ</p>
+          <div class="p-top-blog__ttl-wrap">
+            <h3 class="p-top-blog__ttl">Blog</h3>
+          </div>
+          <div class="p-top-blog__inner l-inner">
+            <h4 class="p-top-blog__heading">山満ブログ</h4>
+            <p class="p-top-blog__txt">木のお医者さんとして皆さまに伝えたいことやお役に立つことなどを発信しておりますので、どうぞご覧ください。</p>
+          </div>
+        </div>
+        <!-- swiper -->
+        <div class="p-top-blog__swiper-box">
+          <div class="swiper p-top-blog__swiper">
+            <div class="swiper-wrapper p-top-blog__wrapper">
+              <div class="swiper-slide p-top-blog__slide">
+                <a href="">
+                  <div href="" class="p-top-blog__link">
+                    <img src="./img/test.jpg" alt="">
+                  </div>
+                    <time class="p-top-blog__time" datetime="">2021.01.01</time>
+                    <h4 class="p-top-blog__head">【タイトル】</h4>
+                </a>
+              </div>
+              <div class="swiper-slide p-top-blog__slide">
+                <a href="">
+                  <div href="" class="p-top-blog__link">
+                    <img src="./img/test.jpg" alt="">
+                  </div>
+                    <time class="p-top-blog__time" datetime="">2021.01.01</time>
+                    <h4 class="p-top-blog__head">【タイトル】</h4>
+                </a>
+              </div>
+              <div class="swiper-slide p-top-blog__slide">
+                <a href="">
+                  <div href="" class="p-top-blog__link">
+                    <img src="./img/test.jpg" alt="" />
+                  </div>
+                    <time class="p-top-blog__time" datetime="">2021.01.01</time>
+                    <h4 class="p-top-blog__head">【タイトル】</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- / swiper -->
+          <div class="p-top-treatment__inner l-inner">
+            <div class="p-top-treatment__btn">
+              <a href="" class="c-more-btn">全ての治療を見る</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
     <div class="l-inner">
 
       <p class="p-test">test</p>
-      <a href="" class="c-more-btn">全ての治療を見る</a><br>
+      <a href="" class="c-more-btn">全ての治療を見る</a>
       <!-- <a href="" class="c-more-btn">全ての記事を見る</a> -->
   </div>
 </body>
