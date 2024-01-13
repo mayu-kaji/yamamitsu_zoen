@@ -7,7 +7,7 @@ $breakpointInner: $innerWidth + strip-unit($padding-pc) * 2;
 html {
   // インナー幅＋余白+1px ~
   font-size: 100%;
-
+  overflow-x: hidden;
   // 768px ~ インナー幅＋余白
   @media ( max-width: $breakpointInner ) {
     font-size: vw(strip-unit($breakpointInner), 16);
@@ -28,6 +28,7 @@ html {
 body {
   font-family: $font-main;
   color: $black;
+  overflow-x: hidden;
 }
 
 // ホバー

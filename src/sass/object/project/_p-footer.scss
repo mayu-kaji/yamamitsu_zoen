@@ -1,0 +1,57 @@
+@use "global" as *;
+
+/*footer*/
+.p-footer {
+  padding: rem(80) 0 rem(50);
+  @include mq(md) {
+    padding: vw-m(15) 0 vw-m(5);
+  }
+}
+
+.p-footer__logo {
+  width: rem(120);
+  display: block;
+  margin: 0 auto;
+  @include mq(md) {
+    width: vw-m(120);
+  }
+}
+
+.p-footer__nav {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: vw-m(25);
+  }
+}
+
+.p-footer__items {
+  display: flex;
+  justify-content: center;
+}
+
+.p-footer__item {
+  font-size: rem(16);
+  letter-spacing: 0.08em;
+  @include mq(md) {
+    font-size: vw-m(13);
+  }
+}
+
+.p-footer__item:not(:first-child) {
+  margin-left: rem(55);
+  @include mq(md) {
+    margin-left: vw-m(30);
+    white-space: nowrap;
+  }
+}
+
+.p-footer__copy {
+  text-align: center;
+  font-size: rem(11);
+  letter-spacing: 0.06em;
+  margin-top: rem(35);
+  @include mq(md) {
+    margin-top: vw-m(25);
+  }
+}
+
