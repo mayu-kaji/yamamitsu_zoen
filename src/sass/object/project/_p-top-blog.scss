@@ -162,6 +162,8 @@
   width: rem(302) !important;
   text-align: left;
   height: 100%;
+  overflow: hidden;
+  transition: .3s;
   @include mq(md) {
     max-width: rem(600);
     width: vw-m(259) !important;
@@ -182,7 +184,6 @@
 .p-top-blog__link {
   display: block;
   position: relative;
-  overflow: hidden;
   transition: .3s;
 }
 

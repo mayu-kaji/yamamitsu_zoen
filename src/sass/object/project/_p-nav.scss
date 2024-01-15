@@ -1,0 +1,150 @@
+@use "global" as *;
+
+/*global nav*/
+
+.p-nav {
+  width: 100%;
+  height: rem(768);
+  background-image: url(../img/bg_03.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 80;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity .3s linear;
+  padding: rem(30) 0;
+  @include mq(md) {
+    height: 100vh;
+  }
+}
+
+.js-nav.is-active {
+  opacity: 1;
+  display: block;
+  transform: translateY(0);
+}
+.p-nav-box {
+  display: none;
+}
+
+.p-nav-box.is-active{
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.p-nav__items {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: rem(350) 0 rem(200);
+  @include mq(md) {
+    flex-direction: column;
+    padding: rem(160) 0 0;
+  }
+  @include mq(sm) {
+    padding: vw-m(160) 0 0;
+  }
+}
+
+.p-nav__item:not(:first-child) {
+  margin-left: rem(22);
+  @include mq(md) {
+    margin-left: 0;
+    margin-top: rem(30);
+  }
+}
+
+.p-nav__item a {
+  min-width: rem(202);
+  border: 1px solid #fff;
+  border-radius: rem(30);
+  font-size: rem(26);
+  color: $white;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  padding: rem(13) rem(32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin:0 auto;
+  @include mq(md) {
+    font-size: rem(22);
+  }
+}
+
+.p-nav__item a:hover {
+  animation: wave 1s;
+}
+
+@keyframes wave {
+  0% {
+      box-shadow: 0 0 0 0 rgb(255 255 255 / 50%);
+  }
+  100% {
+      box-shadow: 0 0 0 1.2em rgb(0 0 0 / 0%);
+  }
+}
+
+
+.p-nav__contact {
+  color: $white;
+  text-align: center;
+  font-size: rem(38);
+  line-height: 1;
+  @include mq(md) {
+    font-size: rem(34);
+    margin-top: rem(55);
+  }
+}
+
+.p-nav__contact a  {
+  color: $white;
+  text-align: center;
+  font-size: rem(38);
+  display: inline-block;;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  @include mq(md) {
+    font-size: rem(34);
+  }
+}
+
+.p-nav__info {
+  color: $white;
+  text-align: center;
+  font-size: rem(19);
+  margin-top: rem(20);
+  line-height: 1;
+  @include mq(md) {
+    font-size: rem(16);
+    margin-top: rem(18);
+  }
+}
+
+.p-nav__copy {
+  color: $white;
+  position: absolute;
+  writing-mode: vertical-lr;
+  font-size: rem(11);
+  right: rem(50);
+  top: rem(200);
+  letter-spacing: 0.06em;
+  transform: rotate(180deg);
+  @include mq(md) {
+    position: static;
+    writing-mode: unset;
+    transform: unset;
+    text-align: center;
+    margin-top: rem(40);
+    font-size: rem(10);
+  }
+}
+

@@ -1,0 +1,89 @@
+@use "global" as *;
+
+/*-----------------------------------
+hamburger-menu
+-----------------------------------*/
+.c-hamburger {
+  width: rem(41);
+  height: rem(41);
+  @include mq(sm) {
+    width: rem(35);
+    height: rem(37);
+  }
+}
+
+.c-hamburger__btn {
+  position: relative;
+  top: 40px;
+  right: 0px;
+  right: 10px;
+  display: flex;
+  width: 41px;
+  height:41px;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  @include mq(sm) {
+    width: rem(35);
+    height: rem(37);
+  }
+}
+
+.c-hamburger-open{
+  position: relative;
+  width: 41px;
+  height:41px;
+  z-index: 100;
+  cursor: pointer;
+  @include mq(sm) {
+    width: rem(35);
+    height: rem(37);
+  }
+}
+
+.c-hamburger-open span:nth-of-type(1),
+.c-hamburger-open span:nth-of-type(2){
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 0;
+  height: 5px;
+  background: $white;
+  width: 100%;
+}
+
+.c-hamburger-open span:nth-of-type(1) {
+  top:0px;
+}
+
+.c-hamburger-open span:nth-of-type(2) {
+  top:14px;
+}
+
+.c-hamburger-open span:nth-of-type(3) {
+  top: 14px;
+  width: rem(41);
+  position: relative;
+}
+
+/*----------------------------------------------
+activeがついたとき
+----------------------------------------------*/
+.c-hamburger-open.active span:nth-of-type(1) {
+  top: 13px;
+  left: 0;
+  transform: translateY(6px) rotate(-45deg);
+
+}
+
+.c-hamburger-open.active span:nth-of-type(2) {
+  top: 26px;
+  left: 0;
+  transform: translateY(-6px) rotate(45deg);
+
+}
+
+.c-hamburger-open.active span:nth-of-type(3){
+  opacity: 0;
+  display: none;
+}

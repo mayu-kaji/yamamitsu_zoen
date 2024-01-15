@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.c-sec-ttl {
+  font-size: rem(30);
+  color: $white;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  @include mq(md) {
+    font-size: rem(14);
+  }
+}
+
+.c-sec-ttl::before {
+  content: attr(data-en);
+  color: $gold;
+  display: block;
+  font-size: rem(130);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin-bottom: rem(60);
+  @include mq(md) {
+    font-size: rem(53);
+    margin-bottom: rem(20);
+  }
+}

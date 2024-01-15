@@ -1,6 +1,6 @@
 
 jQuery(function ($) {
-  
+
   // ページトップボタン
   var topBtn = $('.js-pagetop');
   topBtn.hide();
@@ -38,100 +38,73 @@ jQuery(function ($) {
 });
 
 
-
-//swiper - treatment
-(() => {
-  let swiper, swiperBool;
-  const breakPoint = 768;
-
-  window.addEventListener(
-    "load",
-    () => {
-      if (breakPoint > window.innerWidth) {
-        swiperBool = false;
-      } else {
-        createSwiper();
-        swiperBool = true;
-      }
-    },
-    false
-  );
-
-  window.addEventListener(
-    "resize",
-    () => {
-      if (breakPoint > window.innerWidth && swiperBool) {
-        swiper.destroy(false, true);
-        swiperBool = false;
-      } else if (breakPoint <= window.innerWidth && !swiperBool) {
-        createSwiper();
-        swiperBool = true;
-      }
-    },
-    false
-  );
-
-  function createSwiper() {
-    swiper = new Swiper(".p-top-treatment__swiper", {
-      loop: true,
-      slidesPerView: 3,
-      speed: 15000,
-      disableOnInteraction: false,
-      spaceBetween: 80,
-      autoplay: {
-        delay: 0,
-      },
-    });
-  }
-})();
-
-
-//swiper - blog
-const swiperSlides = document.getElementsByClassName(".swiper-slide.p-top-blog__slide");
-const breakPoint = 768; // ブレークポイントを設定
-let swiper;
-let swiperBool;
-
-window.addEventListener(
-  "load",
-  () => {
-    if (breakPoint < window.innerWidth) {
-      swiperBool = false;
-    } else {
-      createSwiper();
-      swiperBool = true;
-    }
-  },
-  false
-);
-
-window.addEventListener(
-  "resize",
-  () => {
-    if (breakPoint < window.innerWidth && swiperBool) {
-      swiper.destroy(false, true);
-      swiperBool = false;
-    } else if (breakPoint >= window.innerWidth && !swiperBool) {
-      createSwiper();
-      swiperBool = true;
-    }
-  },
-  false
-);
-
-const createSwiper = () => {
-  swiper = new Swiper(".swiper.p-top-blog__swiper", {
-    allowTouchMove: false,
-    loopedSlides: 1,
-    loop: true,
-    spaceBetween: 25,
-    speed: 15000,
-    slidesPerView: 1,
-    // disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
-    // loopAdditionalSlides: 1, // ループさせるスライドの数
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    }
+//hamburger
+$(function(){
+  $('.c-hamburger__btn').on('click', function(){
+    $('.js-nav').toggleClass('is-active');
+    $('.p-nav-box').toggleClass('is-active');
   });
-};
+}());
+
+$(".js-open").click(function () {
+  $(this).toggleClass('active');
+  $("body").toggleClass("active");
+});
+
+
+
+
+
+//ホバーアニメーション　GSAP
+const paragraphs = document.querySelectorAll(".js-text");
+
+
+paragraphs.forEach(paragraph => {
+
+  const textContent = paragraph.textContent;
+  const newTextContent = [...textContent]
+    .map((char) => `<span>${char}</span>`)
+    .join("");
+  paragraph.innerHTML = newTextContent;
+
+  // ホバー時のイベントリスナー
+paragraph.addEventListener('mouseover', () => {
+  const spans = paragraph.querySelectorAll('span');
+  spans.forEach(span => {
+    setTimeout(() => {
+      span.style.color = 'grey';
+    }, Math.random() * 400);
+  });
+});
+
+// ホバーが外れた時のイベントリスナー
+paragraph.addEventListener('mouseout', () => {
+  const spans = paragraph.querySelectorAll('span');
+  spans.forEach(span => {
+    setTimeout(() => {
+      span.style.color = '#000';
+    }, Math.random() * 500);
+  });
+});
+});
+
+// G-SAP アニメーション
+gsap.fromTo(
+  ".js-text span", {
+    autoAlpha: 0,
+  },
+  {
+    autoAlpha: 1,
+    repeatDelay: 1.2,
+    stagger: {
+      each: 0.2,
+      from: "random",
+    },
+  }
+);
+
+// ランダムな赤色を生成する関数
+function getRandomGrayColor() {
+  const gray = Math.floor(Math.random() * 256);
+  return `rgb(${gray}, ${gray}, ${gray})`;
+}

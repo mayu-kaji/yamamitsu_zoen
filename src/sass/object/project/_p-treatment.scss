@@ -1,0 +1,139 @@
+@use "global" as *;
+
+/* archive - treatment*/
+
+.p-treatment {
+  background-color: $navy;
+  padding-top: rem(250);
+  padding-bottom: rem(180);
+  @include mq(md) {
+    padding-top: rem(145);
+    padding-bottom: rem(70);
+  }
+}
+
+.p-treatment__ttl-wrapper {
+  max-width: rem(1043);
+  position: relative;
+}
+
+.p-treatment__side-ttl {
+  position: absolute;
+  color: $navy-txt;
+  font-size: rem(239);
+  writing-mode: vertical-rl;
+  right: 5%;
+  top: rem(-150);
+  z-index: 0;
+  height: rem(1000);
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.p-treatment__inner {
+  max-width: rem(1043);
+  position: relative;
+}
+
+.p-treatment__item img {
+  height: auto;
+  width: 100%;
+  max-width: rem(425);
+  aspect-ratio: 425/583;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 325/246;
+  }
+}
+
+.p-treatment__mask {
+  align-items: center;
+  background: rgba(0, 0, 0, .5);
+  color: $white;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: opacity .6s ease;
+  max-width: rem(425);
+  width: 100%;
+  height: auto;
+  aspect-ratio: 425/583;
+  @include mq(md) {
+    display: contents;
+  }
+}
+
+.p-treatment__mask:hover {
+  opacity: 1;
+  height: auto;
+}
+
+.p-treatment__heading {
+  font-size: rem(25);
+  text-align: center;
+  line-height: calc(50/25);
+  max-width: rem(300);
+  letter-spacing: 0.04em;
+  @include mq(md) {
+    color: $gold;
+    text-align: left;
+    font-size: rem(16);
+    letter-spacing: normal;
+    line-height: calc(28/16);
+    margin-top: rem(15);
+  }
+}
+
+.p-treatment__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: rem(430);
+  @include mq(md) {
+    flex-direction: column;
+    padding-top: rem(85);
+  }
+}
+
+
+.p-treatment__item {
+  cursor: pointer;
+  max-width: rem(425);
+  width: 100%;
+  position: relative;
+  margin-top: rem(135);
+  @include mq(md) {
+    max-width: vw-m(500);
+    margin-inline: auto;
+    margin-top: rem(50);
+  }
+}
+
+.p-treatment__item:nth-child(2n+1) {
+  margin-top: rem(-280);
+  @include mq(md) {
+    margin-top: rem(50);
+  }
+}
+
+.p-treatment__item:nth-child(2) {
+  margin-top: rem(135);
+  @include mq(md) {
+    margin-top: rem(50);
+  }
+}
+
+/*  ページネーション*/
+.p-treatment__pagination {
+  margin: rem(180) auto 0;
+  @include mq(md) {
+    margin-top: rem(55);
+  }
+}

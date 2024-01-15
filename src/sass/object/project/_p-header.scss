@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.p-header {
+  position: fixed;
+  width: 100%;
+  // background-color: red;
+  height: rem(191);
+  z-index: 9999;
+  @include mq(md) {
+    height: rem(100);
+  }
+}
+
+.p-header__inner {
+  width: 100%;
+  height: inherit;
+  padding: 0 rem(40);
+  margin: 0 auto;
+  @include mq(md) {
+    padding: 0 vw-m(25);
+  }
+}
+
+.p-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: inherit;
+}
+
+.p-header__logo {
+  padding: rem(40) 0;
+  position: relative;
+  z-index: 1000;
+  @include mq(md) {
+    padding: vw-m(20) 0;
+  }
+}
+
+.p-header__link {
+  width: rem(107);
+  display: block;
+  @include mq(md) {
+    width: rem(76);
+  }
+}
+
+

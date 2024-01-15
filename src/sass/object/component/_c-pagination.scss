@@ -1,0 +1,54 @@
+@use "global" as *;
+
+
+.pagination{
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-links{
+  display:flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.page-numbers{
+  margin-right:rem(32);
+  border-radius:50%;
+  background:$white;
+  color: $white;
+  width: rem(19);
+  height: rem(19);
+  font-size: 0;
+  @include mq(md) {
+    width: rem(8);
+    height: rem(8);
+    margin-right: rem(15);
+  }
+}
+
+.page-numbers:nth-last-child(2) {//次へのボタンがあるとき
+  margin-right: 0;
+}
+
+.pagination .current{
+  background: $gold;
+  color: $gold;
+}
+
+a.next.page-numbers,
+a.prev.page-numbers {
+  display: none;
+}
+
+.pagination .dots{
+  background:transparent;
+  border: none;
+  pointer-events: none;
+  display: none;
+}
+
+a.page-numbers:hover {
+  opacity: 0.6;
+}

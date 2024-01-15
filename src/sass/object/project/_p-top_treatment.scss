@@ -120,13 +120,13 @@
   }
 }
 
-
-
-// /*swiper*/
+/*swiper*/
 .swiper.p-top-treatment__swiper {
   margin: 0 auto;
+  max-width: 1920px;
   @include mq(md) {
     padding: 0 25px;
+    max-width: unset;
   }
 }
 
