@@ -1,6 +1,7 @@
 @use "global" as *;
 
 /*footer*/
+
 .p-footer {
   padding: rem(80) 0 rem(50);
   @include mq(md) {
@@ -13,7 +14,7 @@
   display: block;
   margin: 0 auto;
   @include mq(md) {
-    width: vw-m(120);
+    width: rem(120);
   }
 }
 
@@ -61,3 +62,51 @@
 // .js-text:hover span {
 //   color: gray; /* ホバー時の初期色 */
 // }
+
+.p-footer__top {
+  background-color: $white;
+  display: flex;
+  line-height: 1;
+  text-align: center;
+  width: rem(62);
+  height: rem(62);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  bottom: 28px;
+  position: fixed;
+  right: 28px;
+  border: $navy 1px solid;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  @include mq(md) {
+    width: vw-m(46);
+    height: vw-m(46);
+    bottom: rem(200);
+  }
+}
+
+.p-footer__top::after {
+  content: "";
+  background-image: url(../img/arrow-top_1.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(16);
+  height: rem(16);
+  display: block;
+  @include mq(md) {
+    width: vw-m(12);
+    height: vw-m(12);
+  }
+}
+
+@media (hover: hover) {
+  .p-footer__top:hover {
+    border: $gold 1px solid;
+    transform: scale(1.05);
+  }
+  .p-footer__top:hover::after {
+    background-image: url(../img/arrow-top_2.svg);
+  }
+}

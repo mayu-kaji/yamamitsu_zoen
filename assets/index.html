@@ -19,19 +19,15 @@
   <!-- ファビコン -->
   <!-- <link rel="icon" href="" /> -->
   <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400;500;700&family=Noto+Serif:wght@200;400;500;700&display=swap" rel="stylesheet">
   <!-- css -->
-  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css">
-  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css" /> -->
-  <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css"> -->
   <link rel="stylesheet" href="./css/common.css">
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
-  <!-- <script defer src="./js/swiper-bundle.min.js"></script> -->
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js"></script>
-  <!-- <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script> -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script defer src="./js/swiper.js"></script>
@@ -69,10 +65,10 @@
                 <a href="./archive-treatment.html">治療紹介</a>
               </li>
               <li class="p-nav__item">
-                <a href="">山満ブログ</a>
+                <a href="./archive-blog.html">山満ブログ</a>
               </li>
               <li class="p-nav__item">
-                <a href="">お問い合わせ</a>
+                <a href="./contact.html">お問い合わせ</a>
               </li>
             </ul>
             <p class="p-nav__contact">Tel <a href="tel:0728923460">072-892-3460</a></p>
@@ -388,26 +384,26 @@
           <div class="swiper-wrapper p-top-treatment__wrapper">
             <div class="swiper-slide p-top-treatment__slide">
               <div class="p-top-treatment__blog">
-                <a href="" class="p-top-treatment__swiper-link">
-                  <img src="./img/test.jpg" alt="" />
+                <a href="./single-treatment.html" class="p-top-treatment__swiper-link">
+                  <img src="./img/test.jpg" alt="">
                 </a>
-                <h4 class="p-top-treatment__blog-ttl">タイトルタイトルタイトル</h4>
+                <h4 class="p-top-treatment__blog-ttl">タイトル1</h4>
+              </div>
+            </div>
+            <div class="swiper-slide p-top-treatment__slide">
+              <div class="p-top-treatment__blog">
+                <a href="./single-treatment.html" class="p-top-treatment__swiper-link">
+                  <img src="./img/test.jpg" alt="">
+                </a>
+                <h4 class="p-top-treatment__blog-ttl">タイトル2</h4>
               </div>
             </div>
             <div class="swiper-slide p-top-treatment__slide">
               <div class="p-top-treatment__blog">
                 <a href="" class="p-top-treatment__swiper-link">
-                  <img src="./img/test.jpg" alt="" />
+                  <img src="./img/test.jpg" alt="">
                 </a>
-                <h4 class="p-top-treatment__blog-ttl">タイトル</h4>
-              </div>
-            </div>
-            <div class="swiper-slide p-top-treatment__slide">
-              <div class="p-top-treatment__blog">
-                <a href="" class="p-top-treatment__swiper-link">
-                  <img src="./img/test.jpg" alt="" />
-                </a>
-                <h4 class="p-top-treatment__blog-ttl">タイトル</h4>
+                <h4 class="p-top-treatment__blog-ttl">タイトル3</h4>
               </div>
             </div>
           </div>
@@ -415,7 +411,7 @@
         <!-- /swiper -->
         <div class="p-top-treatment__inner l-inner">
           <div class="p-top-treatment__btn">
-            <a href="" class="c-more-btn">全ての治療を見る</a><br>
+            <a href="" class="c-more-btn">全ての治療を見る</a>
           </div>
         </div>
       </div>
@@ -441,12 +437,12 @@
           <div class="swiper p-top-blog__swiper">
             <div class="swiper-wrapper p-top-blog__wrapper">
               <div class="swiper-slide p-top-blog__slide">
-                <a href="">
+                <a href=".">
                   <div href="" class="p-top-blog__link">
                     <img src="./img/test.jpg" alt="">
                   </div>
                   <time class="p-top-blog__time" datetime="">2021.01.01</time>
-                  <h4 class="p-top-blog__head">【タイトル】</h4>
+                  <h4 class="p-top-blog__head">【タイトル】1</h4>
                 </a>
               </div>
               <div class="swiper-slide p-top-blog__slide">
@@ -455,7 +451,7 @@
                     <img src="./img/test.jpg" alt="">
                   </div>
                   <time class="p-top-blog__time" datetime="">2021.01.01</time>
-                  <h4 class="p-top-blog__head">【タイトル】</h4>
+                  <h4 class="p-top-blog__head">【タイトル】2</h4>
                 </a>
               </div>
               <div class="swiper-slide p-top-blog__slide">
@@ -464,7 +460,7 @@
                     <img src="./img/test.jpg" alt="" />
                   </div>
                   <time class="p-top-blog__time" datetime="">2021.01.01</time>
-                  <h4 class="p-top-blog__head">【タイトル】</h4>
+                  <h4 class="p-top-blog__head">【タイトル】3</h4>
                 </a>
               </div>
             </div>
@@ -473,7 +469,7 @@
         <!-- / swiper -->
         <div class="p-top-treatment__inner l-inner">
           <div class="p-top-treatment__btn">
-            <a href="" class="c-more-btn">全ての治療を見る</a>
+            <a href="" class="c-more-btn">全ての記事を見る</a>
           </div>
         </div>
       </div>
@@ -641,8 +637,8 @@
       </nav>
       <p class="p-footer__copy">© yamamanzouen Co.Ltd All rights reserved.</p>
     </div>
+    <a href="#" class="p-footer__top js-pagetop"></a>
   </footer>
-
 </body>
 
 </html>

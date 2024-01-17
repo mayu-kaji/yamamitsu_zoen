@@ -3,7 +3,6 @@
 .p-header {
   position: fixed;
   width: 100%;
-  // background-color: red;
   height: rem(191);
   z-index: 9999;
   @include mq(md) {
@@ -43,5 +42,3 @@
     width: rem(76);
   }
 }
-
-

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <!-- meta情報 -->
+  <title>タイトル</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!-- ogp -->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <!-- ファビコン -->
+  <!-- <link rel="icon" href="" /> -->
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400;500;700&family=Noto+Serif:wght@200;400;500;700&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="css/common.css" type="text/css">
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script defer src="./js/common.js"></script>
+</head>
+
+<body>
+  <header class="p-header">
+    <div class="p-header__inner">
+      <div class="p-header__wrapper">
+        <h1 class="p-header__logo">
+          <a href="./index.html" class="p-header__link">
+            <img src="./img/logo_01.svg" alt="山満造園">
+          </a>
+        </h1>
+        <!-- hamburger -->
+        <div class="c-hamburger">
+          <div class="c-hamburger__btn">
+            <button class="c-hamburger-open js-open">
+              <span></span>
+              <span></span>
+              <span><img src="./img/txt_menu.svg" alt="MENU"></span>
+            </button>
+          </div>
+        </div>
+        <!-- menu -->
+        <nav class="p-nav js-nav" id="menu-box">
+          <div class="p-nav-box js-nav-box">
+            <ul class="p-nav__items">
+              <li class="p-nav__item">
+                <a href="./index.html">TOP</a>
+              </li>
+              <li class="p-nav__item">
+                <a href="./archive-treatment.html">治療紹介</a>
+              </li>
+              <li class="p-nav__item">
+                <a href="./archive-blog.html">山満ブログ</a>
+              </li>
+              <li class="p-nav__item">
+                <a href="">お問い合わせ</a>
+              </li>
+            </ul>
+            <p class="p-nav__contact">Tel <a href="tel:0728923460">072-892-3460</a></p>
+            <p class="p-nav__info">8:30～17:30（定休日:日・祝日）</p>
+            <p class="p-nav__copy">© yamamanzouen Co.Ltd All rights reserved.</p>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="l-main">
+    <section class="p-single-blog">
+      <div class="p-single-blog__inner l-inner">
+        <div class="p-single-blog__container">
+          <time class="p-blog__time" datetime="2023-12-24">2023.12.24</time>
+          <h2 class="p-single-blog__ttl">【松の正しい育て方】</h2>
+          <!-- <?php the_content(); ?> -->
+          <p class="p-single-blog__txt">
+            この文章はダミーですあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほこの文章はこの文章はダミーですあいうえおかきくけこさしすせそたちつてとなにすせそたちつてとなにぬねのはひふへほすせそつてたちつてとなにぬねのはひふへほこの文章はダミーですあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほこの文章はこの文章はダミーですあいうえおかきくけこさしすせそたちつてとなにすせそたちつてとなにぬねのはひふへほすせそつてたちつてとなにぬねのはひふへほこの文章はダミーですあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほこの文章はこの文章はダミーですあいうえおかきく
+            けこさしすせそたちつてとなにすせそたちつてとなにぬねのはひふへほすせそつてたちつてとなにぬねのはひふへほこの文章はダミーですあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほこの文章はこの文章はダミーですあいうえおかきく
+          </p>
+          <div class="p-single-blog__img">
+            <img src="./img/diagnosis_02.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="p-single-blog__btn">
+          <a href="./archive-blog.html" class="c-more-btn">一覧に戻る</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="p-footer">
+    <div class="footer__inner l-inner">
+      <a href="" class="p-footer__logo">
+        <img src="./img/logo_02.svg" alt="山満造園">
+      </a>
+      <nav class="p-footer__nav">
+        <ul class="p-footer__items">
+          <li class="p-footer__item">
+            <a href="" class="js-text">TOP</a>
+          </li>
+          <li class="p-footer__item">
+            <a href="" class="js-text">治療紹介</a>
+          </li>
+          <li class="p-footer__item">
+            <a href="" class="js-text">山満ブログ</a>
+          </li>
+          <li class="p-footer__item">
+            <a href="" class="js-text">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+      <p class="p-footer__copy">© yamamanzouen Co.Ltd All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

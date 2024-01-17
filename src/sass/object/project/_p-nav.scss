@@ -80,19 +80,22 @@
   }
 }
 
-.p-nav__item a:hover {
-  animation: wave 1s;
-}
+@media (hover: hover) {
+  .p-nav__item a:hover {
+    animation: wave 1s;
+    background-color: #fff;
+    color: $navy;
+    }
+  }
 
 @keyframes wave {
   0% {
       box-shadow: 0 0 0 0 rgb(255 255 255 / 50%);
   }
   100% {
-      box-shadow: 0 0 0 1.2em rgb(0 0 0 / 0%);
+      box-shadow: 0 0 0 1em rgb(0 0 0 / 0%);
   }
 }
-
 
 .p-nav__contact {
   color: $white;
@@ -147,4 +150,3 @@
     font-size: rem(10);
   }
 }
-

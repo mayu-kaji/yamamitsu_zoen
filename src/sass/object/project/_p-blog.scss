@@ -1,0 +1,133 @@
+@use "global" as *;
+
+/* archive - blog */
+
+.p-blog {
+  padding-bottom: rem(180);
+  @include mq(md) {
+    padding-bottom: rem(70);
+  }
+}
+
+.p-blog__ttl-wrapper {
+  max-width: rem(1043);
+  position: relative;
+}
+
+.p-blog__side-ttl {
+  position: absolute;
+  color: $navy-txt;
+  font-size: rem(239);
+  writing-mode: vertical-rl;
+  right: 8%;
+  top: rem(-195);
+  z-index: 0;
+  height: rem(1000);
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.p-blog__inner {
+  max-width: rem(1048);
+  position: relative;
+}
+
+.p-blog__container {
+  margin-top: rem(210);
+  @include mq(md) {
+    margin-top: rem(110);
+  }
+}
+
+.p-blog__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(100) rem(46) ;
+  @include mq(md) {
+    flex-direction: column;
+    justify-content: center;
+    gap: rem(75);
+  }
+}
+
+.p-blog__item {
+  max-width: rem(302);
+  width: 100%;
+  @include mq(md) {
+    max-width: rem(500);
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+.p-blog__time {
+  font-size: rem(14);
+  font-weight: 200;
+  color: #B3B3B3;
+  line-height: 1;
+  display: inline-block;
+  letter-spacing: 0.04em;
+  @include mq(sm) {
+    font-size: rem(12);
+  }
+}
+
+.p-blog__img {
+  width: rem(302);
+  margin-top: rem(15);
+  @include mq(md) {
+    max-width: rem(500);
+    width: 100%;
+  }
+}
+
+.p-blog__img img {
+  aspect-ratio: 302/228;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 325/246;
+  }
+}
+
+.p-blog__txt-box {
+  margin-top: rem(30);
+  @include mq(md) {
+    margin-top: rem(20);
+  }
+}
+
+.p-blog__heading {
+  font-size: rem(16);
+  color: $gold;
+  font-weight: 500;
+}
+
+.p-blog__desc {
+  color: $white;
+  font-size: rem(14);
+  line-height: calc(27/14);
+  letter-spacing: 0.04em;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-top: rem(15);
+  font-weight: 200;
+  @include mq(md) {
+    font-weight: 400;
+    -webkit-line-clamp: 3;
+  }
+  @include mq(sm) {
+    font-size: rem(12);
+    line-height: calc(21/12);
+  }
+}
+
+/*  ページネーション*/
+.p-blog__pagination {
+  margin: rem(170) auto 0;
+  @include mq(md) {
+    margin-top: rem(55);
+  }
+}

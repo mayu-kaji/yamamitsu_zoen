@@ -17,8 +17,10 @@
   font-weight: 500;
   @include mq(md) {
     max-width: vw-m(500);
-    font-size: vw-m(12);
     padding: rem(17.5) rem(5);
+    @include mq(sm) {
+      font-size:rem(12);
+    }
   }
 }
 

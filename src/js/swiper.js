@@ -35,11 +35,10 @@
     swiper = new Swiper(".p-top-treatment__swiper", {
       loop: true,
       slidesPerView: "auto",
-      speed: 2000,
+      speed: 8000,
       freeMode: true,
       freeModeMomentum: false,
       spaceBetween: 80,
-      // loopAdditionalSlides: 6,
       centerInsufficientSlides: true,//スライドが少ない場合に中央寄せ
       autoplay: {
         delay: 0,
@@ -87,10 +86,9 @@ const createSwiper = () => {
   swiper = new Swiper(".swiper.p-top-blog__swiper", {
     allowTouchMove: false,
     slidesPerView: 2,
-    loopedSlides: 1,
     loop: true,
     spaceBetween: 25,
-    speed: 5000,
+    speed: 8000,
     freeModeMomentum: true,//スライドのスピードを一定にする
     centerInsufficientSlides: true,
     loopAdditionalSlides: 4, // ループさせるスライドの数
