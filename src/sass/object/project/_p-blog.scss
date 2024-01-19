@@ -43,7 +43,8 @@
 .p-blog__items {
   display: flex;
   flex-wrap: wrap;
-  gap: rem(100) rem(46) ;
+  gap: rem(100) rem(46);
+  overflow: hidden;
   @include mq(md) {
     flex-direction: column;
     justify-content: center;
@@ -54,10 +55,37 @@
 .p-blog__item {
   max-width: rem(302);
   width: 100%;
+  overflow: hidden;
   @include mq(md) {
     max-width: rem(500);
     width: 100%;
     margin-inline: auto;
+  }
+}
+
+
+.p-blog__img {
+  display: block;
+  position: relative;
+  transition: .3s;
+}
+
+.p-blog__img:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  .p-blog__img:hover {
+    transform: scale(1.05);
+  }
+  .p-blog__img:hover::after {
+    background: rgba(0, 0, 0, 0.7);
   }
 }
 

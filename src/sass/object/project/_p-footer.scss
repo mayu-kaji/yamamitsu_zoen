@@ -46,6 +46,20 @@
   }
 }
 
+.p-footer__link {
+  padding: 0.5em 0;
+  display: inline-block;
+}
+
+.p-footer__link span {
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.p-footer__link span.is-active {
+  opacity: 0.4;
+}
+
 .p-footer__copy {
   text-align: center;
   font-size: rem(11);
@@ -56,12 +70,10 @@
   }
 }
 
-.js-text > span {
-  display: inline-block;
-}
-// .js-text:hover span {
-//   color: gray; /* ホバー時の初期色 */
+// .js-text > span {
+//   display: inline-block;
 // }
+
 
 .p-footer__top {
   background-color: $white;

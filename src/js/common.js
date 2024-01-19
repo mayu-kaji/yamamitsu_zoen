@@ -1,30 +1,26 @@
 
 jQuery(function ($) {
 
-  // ページトップボタン
+  // top-btn
   var topBtn = $('.js-pagetop');
   topBtn.hide();
-
-  // ページトップボタンの表示設定
   $(window).scroll(function () {
     if ($(this).scrollTop() > 70) {
-      // 指定px以上のスクロールでボタンを表示
       topBtn.fadeIn();
     } else {
-      // 画面が指定pxより上ならボタンを非表示
       topBtn.fadeOut();
     }
   });
 
-  // ページトップボタンをクリックしたらスクロールして上に戻る
+  // scroll - top
   topBtn.click(function () {
     $('body,html').animate({
       scrollTop: 0
-    }, 300, 'swing');
+    }, 500, 'swing');
     return false;
   });
 
-  // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動。ヘッダーの高さ考慮。)
+
   $(document).on('click', 'a[href*="#"]', function () {
     let time = 400;
     let header = $('header').innerHeight();
@@ -54,57 +50,67 @@ $(".js-open").click(function () {
 
 
 
+/**
+ * 動きの参考
+ * @see https://aimoriyama.com/
+ */
 
-//ホバーアニメーション　GSAP
-const paragraphs = document.querySelectorAll(".js-text");
-
-
-paragraphs.forEach(paragraph => {
-
-  const textContent = paragraph.textContent;
-  const newTextContent = [...textContent]
-    .map((char) => `<span>${char}</span>`)
-    .join("");
-  paragraph.innerHTML = newTextContent;
-
-  // ホバー時のイベントリスナー
-paragraph.addEventListener('mouseover', () => {
-  const spans = paragraph.querySelectorAll('span');
-  spans.forEach(span => {
-    setTimeout(() => {
-      span.style.color = 'grey';
-    }, Math.random() * 400);
-  });
-});
-
-// ホバーが外れた時のイベントリスナー
-paragraph.addEventListener('mouseout', () => {
-  const spans = paragraph.querySelectorAll('span');
-  spans.forEach(span => {
-    setTimeout(() => {
-      span.style.color = '#000';
-    }, Math.random() * 500);
-  });
-});
-});
-
-// G-SAP アニメーション
-gsap.fromTo(
-  ".js-text span", {
-    autoAlpha: 0,
-  },
-  {
-    autoAlpha: 1,
-    repeatDelay: 1.2,
-    stagger: {
-      each: 0.2,
-      from: "random",
-    },
+/* spanタグに分割 */
+let splitTarget = document.querySelectorAll('.js-splitText');
+splitTarget.forEach(function (target) {
+  if (!target.classList.contains('is-active')) {
+    newText = '';
+    spanText = target.innerHTML;
+    spanText.split('').forEach((char) => {
+      newText += '<span>' + char + '</span>';
+    });
+    target.innerHTML = newText;
   }
-);
+});
 
-// ランダムな赤色を生成する関数
-function getRandomGrayColor() {
-  const gray = Math.floor(Math.random() * 256);
-  return `rgb(${gray}, ${gray}, ${gray})`;
-}
+let animationText = document.querySelectorAll('.js-textAnimation');
+let timeIds = [];
+
+animationText.forEach(function (word) {
+  word.addEventListener('mouseover', function () {
+    let texts = word.children;
+
+    timeIds.forEach(function (timeId) {
+      clearTimeout(timeId);
+    })
+
+    for (let i = 0; i < texts.length; i++) {
+      timeIds.push(setTimeout(function () {
+        texts[i].classList.add('is-active');
+      }, Math.floor(Math.random() * (400 - 30 + 1) + 30)))
+    }
+  });
+
+
+  word.addEventListener('mouseleave', function () {
+    let texts = word.children;
+
+    timeIds.forEach(function (timeId) {
+      clearTimeout(timeId);
+    })
+
+    for (let i = 0; i < texts.length; i++) {
+      timeIds.push(setTimeout(function () {
+        texts[i].classList.remove('is-active');
+      }, Math.floor(Math.random() * (700 - 100 + 1) + 100)))
+    }
+  });
+});
+
+
+//checkbox
+$(".js-check").click(function() {
+  var $radio = $(this).find('input[type="radio"]');
+
+  $(".js-check").not(this).removeClass("click");
+  $(this).addClass("click");
+
+  if (!$radio.is(':checked')) {
+    $radio.prop("checked", true);
+  }
+});

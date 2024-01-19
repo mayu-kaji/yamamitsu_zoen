@@ -43,6 +43,9 @@
     color: $navy;
     letter-spacing: 0.04em;
   }
+  @include mq(sm) {
+    letter-spacing: -0.01em;
+  }
 }
 
 .p-diagnosis__txt {
@@ -55,6 +58,8 @@
   }
   @include mq(sm) {
     font-size: vw-m(12);
+    letter-spacing: -0.01em;
+    white-space: nowrap;
   }
 }
 

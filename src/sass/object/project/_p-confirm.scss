@@ -1,6 +1,6 @@
 @use "global" as *;
 
-/* contact - confirm */
+/* contact  */
 
 .p-confirm {
   padding-bottom: rem(180);
@@ -22,7 +22,16 @@
   text-align: center;
   @include mq(md) {
     margin-top: rem(50);
-    padding: rem(45) rem(5) rem(40) rem(5);
+    padding: rem(42) rem(25) rem(40) rem(25);
+  }
+}
+
+.p-confirm-form-ttl {
+  display: none;
+  @include mq(md) {
+    display: block;
+    font-size: rem(18);
+    font-weight: bold;
   }
 }
 
@@ -31,8 +40,13 @@
   line-height: 1;
   border-bottom: $black 0.5px solid;
   padding-bottom: rem(30);
+  font-weight: 500;
   @include mq(md) {
-    font-size: vw-m(14);
+    margin-top: rem(20);
+    padding-bottom: rem(10);
+  }
+  @include mq(sm) {
+    font-size: vw-m(11);
   }
 }
 
@@ -45,11 +59,119 @@
   }
 }
 
-.p-confirm__name {
-  font-size: rem(16);
-  margin-top: rem(35);
+.p-confirm__box {
+  text-align: left;
+}
+
+.p-confirm__fields {
+  display: flex;
+  margin-top: rem(60);
   @include mq(md) {
+    flex-direction: column;
+    margin-top: rem(40);
+  }
+}
+
+.p-confirm__label {
+  font-size: rem(16);
+  font-weight: bold;
+  text-align: right;
+  width: rem(200);
+  position: relative;
+  @include mq(md) {
+    width: 100%;
+    text-align: left;
+  }
+  @include mq(sm) {
     font-size: vw-m(11);
+  }
+}
+
+.p-confirm__label::after{
+  content: attr(data-address);
+  display: inline-block;
+  position: absolute;
+  right: -45%;
+  @include mq(md) {
+    display: none;
+    right: 0;
+    left: 3%;
+    top: 220%;
+  }
+}
+
+.p-confirm__input {
+  margin-left: rem(80);
+  max-width: calc(100% - #{rem(200)});
+  width: 100%;
+  font-size: rem(16);
+  font-weight: bold;
+  position: relative;
+  @include mq(md) {
+    margin-left: rem(0);
+    padding-left: rem(25);
+    margin-top: rem(20);
+    max-width: unset;
+  }
+  @include mq(sm) {
+    font-size: vw-m(11);
+  }
+}
+.p-confirm__input::after{
+  display: none;
+  @include mq(md) {
+    content: attr(data-address);
+    display: inline-block;
+    position: absolute;
+    left: 1%;
+    top: 0%;
+  }
+  @include mq(sm) {
+    font-size: vw-m(11);
+    left: 2%;
+  }
+}
+
+.p-confirm__fields:nth-child(7) > .p-confirm__input{
+  @include mq(md) {
+    padding-left: rem(25);
+  }
+}
+
+.p-confirm__box--bottom {
+  border-top: $black 0.5px solid;
+  margin-top: rem(85);
+  padding-top: rem(65);
+  @include mq(md) {
+    margin-top: rem(60);
+    padding-top: 0;
+  }
+}
+
+.p-confirm__label-txt {
+  width: rem(200);
+  font-size: rem(16);
+  font-weight: bold;
+  @include mq(sm) {
+    font-size: vw-m(11);
+  }
+}
+
+.p-confirm__textarea {
+  margin-left: rem(80);
+  max-width: calc(100% - #{rem(200)});
+  font-size: rem(16);
+  font-weight: bold;
+  width: 100%;
+  @include mq(md) {
+    max-width: unset;
+    margin-left: rem(0);
+    padding-left: rem(25);
+    margin-top: rem(40);
+  }
+  @include mq(sm) {
+    font-size: vw-m(11);
+    margin-top: rem(20);
   }
 }
 
@@ -60,7 +182,6 @@
   margin: rem(110) auto 0;
   @include mq(md) {
     margin-top: rem(45);
-    max-width: vw-m(119);
     font-size: vw-m(12);
   }
 }
@@ -81,9 +202,13 @@
   width: 100%;
   @include mq(md) {
     padding: vw-m(10);
-    font-size: vw-m(12);
+    font-size: rem(12);
+    width: rem(119);
+    max-width: unset;
+    padding: rem(10);
+    border-radius: rem(10) ;
   }
-}
+ }
 
 .p-confirm__submit {
   display: block;
@@ -102,9 +227,13 @@
   border: none;
   cursor: pointer;
   color: $white;
-  border: transparent 1px solid;
   @include mq(md) {
-    margin-left: 0;
+    margin-left: rem(15);
+    width: rem(119);
+    max-width: unset;
+    padding: rem(10);
+    font-size: rem(12);
+    border-radius: rem(10);
   }
 }
 
@@ -115,9 +244,7 @@
     letter-spacing: 0.15em;
   }
   .p-confirm__submit:hover {
-    background:$white;
-    color: #C1272D;
+    background-color: #d10007;
     letter-spacing: 0.15em;
-    border: $gold 1px solid;
   }
 }
